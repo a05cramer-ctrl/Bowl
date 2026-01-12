@@ -6,7 +6,7 @@ function App() {
   const [copied, setCopied] = useState(false)
   const [loreVisible, setLoreVisible] = useState(false)
   const loreSectionRef = useRef<HTMLElement>(null)
-  const contractAddress = '8tidgafhhzcw8zocywknwt3bkpceyaiz3laqkmybonk'
+  const contractAddress = '6k6X8VSQobF7aeFFTdgKpggZJsMP4UD3C6HFw63Ubonk'
 
   const copyToClipboard = async () => {
     try {
@@ -72,7 +72,7 @@ function App() {
       <nav className="top-nav">
         <a href="#about">about</a>
         <a href="#chart">chart</a>
-        <a href="#community">community</a>
+        <a href="https://x.com/Bowl_bonk" target="_blank" rel="noopener noreferrer">community</a>
         <button className="close-btn">✕</button>
       </nav>
 
@@ -114,7 +114,7 @@ function App() {
               </svg>
               Dexscreener
             </a>
-            <a href="#" className="social-btn" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/Bowl_bonk" className="social-btn" target="_blank" rel="noopener noreferrer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
