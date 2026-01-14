@@ -3,8 +3,20 @@ import './App.css'
 import videoSrc from './4e011f7c-ad1f-4088-a9d4-5f7e739b3344.mp4'
 
 function App() {
+  const [copied, setCopied] = useState(false)
   const [loreVisible, setLoreVisible] = useState(false)
   const loreSectionRef = useRef<HTMLElement>(null)
+  const contractAddress = 'aBKTT57cvumxa1p3p1k2SsbkGN8uesZENXDUFcjbonk'
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(contractAddress)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy:', err)
+    }
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -74,6 +86,14 @@ function App() {
           <div className="status-badge">
             <span className="status-dot"></span>
             <span>live mc: n/a</span>
+          </div>
+
+          {/* Contract Box */}
+          <div className="contract-box" onClick={copyToClipboard}>
+            <div className="contract-label">Contract:</div>
+            <div className="contract-address">{contractAddress}</div>
+            <div className="contract-hint">click to copy</div>
+            {copied && <div className="toast">Copied!</div>}
           </div>
 
           {/* Primary Buttons */}
