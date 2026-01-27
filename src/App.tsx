@@ -6,7 +6,7 @@ function App() {
   const [copied, setCopied] = useState(false)
   const [loreVisible, setLoreVisible] = useState(false)
   const loreSectionRef = useRef<HTMLElement>(null)
-  const contractAddress = 'BUjtoymLbBMh5AVYHsDuW3sdbzuXhEo2P23Qvvz1bonk'
+  const contractAddress = '6X9YvTXjkcvmrwvoNbrod8qNggQDe7PnRx1DMwDbonk'
 
   const copyToClipboard = async () => {
     try {
